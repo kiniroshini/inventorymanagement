@@ -1,0 +1,87 @@
+<!-- include header -->
+<%- include('include/_header') %>
+<!-- /include header -->
+
+
+<!-- Main Site -->
+<main id="site-main">
+    <div class="container">
+        <div class="box-nav d-flex justify-between">
+            <div class="filer">
+                <a href="/"><i class="fas fa-angle-double-left"></i>All items</a>
+            </div>
+
+        </div>
+        <div class="form-title text-center">
+            <h2 class="text-dark">Update Item</h2>
+            <span class="text-light">Update details about the new item using below form</span>
+        </div>
+
+        <!-- add user form-->
+      <!-- form handling -->
+<form method="POST" id="update_user">
+    <div class="new_user">
+        <div class="form-group">
+            <label for="name" class="text-light">Name</label>
+            <input type="hidden" name="id" value="<%=item._id%>">
+            <input type="text" name="name" value="<%=item.name%>" placeholder="Sugar">
+        </div>
+        <div class="form-group">
+            <label for="desc" class="text-light">Description</label>
+            
+            <input type="text" name="desc" value="<%=item.description%>" placeholder="Used for eating purposes, sold in kilo">
+        </div>
+        <div class="form-group">
+            <label for="category" class="text-light">Category</label>
+            <div class="radio inline">
+                <input type="checkbox" name="category" value="Grocery" <%=item.category=='Grocery'?'checked':''%>>
+                <label for="category" class="text-light">Grocery</label>
+            </div>
+            <div class="radio inline">
+                <input type="checkbox" name="category" value="Skin care" <%=item.category=='Skin care'?'checked':''%> >
+                <label for="category" class="text-light">Skin care</label>
+            </div>
+            <div class="radio inline">
+                <input type="checkbox" name="category" value="Beauty & hygiene" <%=item.category=='Beauty & hygiene'?'checked':''%> >
+                <label for="category" class="text-light">Beauty & Hygiene</label>
+            </div>
+            <div class="radio inline">
+                <input type="checkbox" name="category" value="Kitchen, garden and pets" <%=item.category=='Kitchen, garden and pets'?'checked':''%> >
+                <label for="category" class="text-light">Kitchen, garden and pets</label>
+            </div>
+          
+        </div>
+
+        <div class="form-group">
+            <label for="availability" class="text-light">Availability</label>
+            <div class="radio inline">
+                <input type="checkbox" name="availability" value="Urgent" <%=item.availability=='urgently needed'?'checked':''%> > 
+                <label for="availability" class="text-light">Urgent</label>
+            </div>
+            <div class="radio inline">
+                <input type="checkbox" name="availability" value="Just enough"   <%=item.availability=='Just enough'?'checked':''%>> 
+                <label for="availability" class="text-light">Just enough</label>
+            </div>
+            <div class="radio inline">
+                <input type="checkbox" name="availability" value="Ample"  <%=item.availability=='Ample'?'checked':''%> >
+                <label for="availability" class="text-light">Ample</label>
+            </div>
+
+          
+        </div>
+        <div class="form-group">
+            <button type="submit" class="btn text-dark update">Add</button>
+        </div>
+    </div>
+
+</form>
+
+
+    </div>
+</main>
+<!-- /Main Site -->
+
+
+<!-- include footer -->
+<%- include('include/_footer') %>
+<!-- /include footer -->

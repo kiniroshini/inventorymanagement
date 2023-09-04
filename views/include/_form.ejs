@@ -1,0 +1,57 @@
+<!-- form handling -->
+<form action="/api/items" method="POST" id="add_user">
+    <div class="new_user">
+        <div class="form-group">
+            <label for="name" class="text-light">Name</label>
+            <input type="hidden" name="id" value="">
+            <input type="text" name="name" value="" placeholder="Sugar">
+        </div>
+        <div class="form-group">
+            <label for="description" class="text-light">Description</label>
+            
+            <input type="text" name="description" value="" placeholder="Used for eating purposes, sold in kilo">
+        </div>
+        <div class="form-group">
+            <label for="category" class="text-light">Category</label>
+            <div class="radio inline">
+                <input type="checkbox" name="category" value="Grocery" >
+                <label for="category" class="text-light">Grocery</label>
+            </div>
+            <div class="radio inline">
+                <input type="checkbox" name="category" value="Skin care" >
+                <label for="category" class="text-light">Skin care</label>
+            </div>
+            <div class="radio inline">
+                <input type="checkbox" name="category" value="Beauty & hygiene" >
+                <label for="category" class="text-light">Beauty & Hygiene</label>
+            </div>
+            <div class="radio inline">
+                <input type="checkbox" name="category" value="Kitchen, garden and pets" >
+                <label for="category" class="text-light">Garden & pets</label>
+            </div>
+          
+        </div>
+
+        <div class="form-group">
+            <label for="availability" class="text-light">Availability</label>
+            <div class="radio inline">
+                <input type="checkbox" name="availability" value="urgently needed" >
+                <label for="availability" class="text-light">Urgently needed</label>
+            </div>
+            <div class="radio inline">
+                <input type="checkbox" name="availability" value="just enough" >
+                <label for="availability" class="text-light">Just enough</label>
+            </div>
+            <div class="radio inline">
+                <input type="checkbox" name="availability" value="ample" >
+                <label for="availability" class="text-light">Ample</label>
+            </div>
+
+          
+        </div>
+        <div class="form-group">
+            <button type="submit" class="btn text-dark update">Add</button>
+        </div>
+    </div>
+
+</form>
